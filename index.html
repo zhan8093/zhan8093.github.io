@@ -2,37 +2,205 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Xuanming Zhang | Mathematical Oncology</title>
+  <meta name="description" content="Xuanming Zhang — PhD candidate in Industrial & Systems Engineering at the University of Minnesota. Mathematical modeling of tumor evolution and therapeutic response." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>𝛌</text></svg>">
+  <!-- Schema.org Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Xuanming Zhang",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Minnesota" },
+    "email": "mailto:zhan8093@umn.edu",
+    "jobTitle": "PhD Candidate",
+    "url": "https://zhan8093.github.io",
+    "sameAs": []
+  }
+  </script>
 </head>
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <p>PhD Student at University of Minnesota</p>
+  <header class="site-header" id="top">
+    <div class="container header-grid">
+      <div>
+        <h1 class="name">Xuanming Zhang</h1>
+        <p class="tagline">PhD Candidate, Industrial &amp; Systems Engineering, University of Minnesota</p>
+        <p class="quick-links">
+          <a href="mailto:zhan8093@umn.edu" class="chip">zhan8093@umn.edu</a>
+          <span class="sep">•</span>
+          <a href="https://zhan8093.github.io" class="chip">zhan8093.github.io</a>
+          <span class="sep">•</span>
+          <a href="#cv" class="chip">CV (PDF)</a>
+        </p>
+      </div>
+      <nav class="site-nav">
+        <a href="#about">About</a>
+        <a href="#interests">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#rip">In&nbsp;Progress</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#talks">Talks</a>
+        <a href="#refs">References</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hello! I'm a researcher interested in cancer modeling, systems biology, and applied mathematics...</p>
+  <main class="container">
+    <!-- About -->
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p>
+        I build quantitative models to study <strong>tumor evolution</strong> and <strong>therapeutic response</strong>.
+        My work combines <strong>branching processes</strong>, <strong>ODEs</strong>, and <strong>SDEs</strong> with
+        probabilistic and statistical inference to uncover intratumoral heterogeneity, evaluate therapeutic mechanisms,
+        and guide therapy design and optimization.
+      </p>
+      <p class="mini">Advisor: <em>Prof. Kevin Leder</em> • B.Sc. (Applied Math), Fudan University</p>
     </section>
 
-    <section id="research">
+    <!-- Research Interests -->
+    <section id="interests" class="card">
       <h2>Research</h2>
-      <p>I use ODEs, SDEs, and simulation frameworks to understand tumor-immune dynamics.</p>
+      <p class="lead">
+        Mathematical modeling of cancer dynamics; stochastic processes; tumor–immune interactions; parameter estimation; therapy design.
+      </p>
+      <ul class="bullets">
+        <li>Stochastic &amp; deterministic models (branching processes, ODE/SDE) of tumor progression and therapy response.</li>
+        <li>Inference and identifiability: parameter estimation, profile likelihoods, uncertainty quantification.</li>
+        <li>Applications to immunotherapy (CISH-KO T cells, checkpoint blockade) and radiotherapy (GBM, optimal dosing).</li>
+      </ul>
     </section>
 
-    <section id="contact">
+    <!-- Publications -->
+    <section id="publications" class="card">
+      <h2>Publications</h2>
+      <ol class="pubs">
+        <li><span class="me">*</span>Leder, K., Wang, Z., <strong>Zhang, X.</strong> (2025).
+          <em>Parameter Estimation in Recurrent Tumor Evolution with Limited Carrying Capacity</em>.
+          Preprint.</li>
+        <li><span class="me">*</span>Gunnarsson, E. B., Leder, K., <strong>Zhang, X.</strong> (2025).
+          <em>Limit theorems for the site frequency spectrum of neutral mutations in an exponentially growing population</em>.
+          <em>Stochastic Processes and their Applications</em>.</li>
+        <li><span class="me">*</span>Leder, K., Sun, R., Wang, Z., <strong>Zhang, X.</strong> (2024).
+          <em>Parameter estimation from single patient, single time-point sequencing data of recurrent tumors</em>.
+          <em>Journal of Mathematical Biology</em>, 89(5), 51.
+          <a href="https://link.springer.com/article/10.1007/s00285-024-02149-x">Link</a></li>
+        <li>Pan, Y., Xu, Z., Guang, J., Chen, X., Dai, J. G., Wang, C., <strong>Zhang, X.</strong>, et al. (2021).
+          <em>A high-fidelity, machine-learning enhanced queueing network simulation model for hospital ultrasound operations</em>.
+          In <em>Winter Simulation Conference (WSC)</em>, IEEE.</li>
+      </ol>
+      <p class="mini"><span class="me">*</span> authors listed alphabetically.</p>
+    </section>
+
+    <!-- Research in Progress -->
+    <section id="rip" class="card">
+      <h2>Research in Progress</h2>
+      <details open>
+        <summary><strong>Mathematical Modeling of MDSC-Mediated Immunosuppression in Glioblastoma under Radiotherapy</strong></summary>
+        <p>
+          ODE model of the GBM tumor–immune microenvironment quantifying MDSC-driven suppression under radiotherapy; calibrated to clinical data to explore optimal RT regimes and run in-silico virtual trials.
+          <em>Collaborators: Kevin Leder, Jasmine Foo, Lindsey Sloan, John Metzcar.</em>
+        </p>
+      </details>
+      <details>
+        <summary><strong>Mathematical Modeling of CISH-Knockout T Cells with Checkpoint Inhibition</strong></summary>
+        <p>
+          Population dynamical model of endogenous and infused CISH-KO T cells, IL-2 dynamics, and tumor burden; analyzes competition for IL-2 and synergy with checkpoint blockade to predict conditions for durable response.
+          <em>Collaborators: Kevin Leder, Jasmine Foo, Emil Lou, Kamran Kaveh, Sarah Anderson.</em>
+        </p>
+      </details>
+    </section>
+
+    <!-- Teaching -->
+    <section id="teaching" class="card">
+      <h2>Teaching</h2>
+      <div class="table">
+        <div class="row"><div>IE 4551/5551: <em>Production, Inventory, and Service Operations</em> — Teaching Assistant</div><div>Spring 2025</div></div>
+        <div class="row"><div>IE 3521: <em>Statistics, Quality, and Reliability</em> — Teaching Assistant</div><div>Spring 2023</div></div>
+        <div class="row"><div>IE 3521: <em>Statistics, Quality, and Reliability</em> — Teaching Assistant</div><div>Spring 2022</div></div>
+        <div class="row"><div>IE 4551: <em>Production and Inventory Control</em> — Teaching Assistant</div><div>Spring 2022</div></div>
+        <div class="row"><div>IE 3553: <em>Simulation</em> — Teaching Assistant</div><div>Fall 2021</div></div>
+        <div class="row"><div>Markov Chain and Stochastic Processes — Teaching Assistant (SUFE)</div><div>Summer 2019</div></div>
+      </div>
+    </section>
+
+    <!-- Talks -->
+    <section id="talks" class="card">
+      <h2>Conference Presentations &amp; Posters</h2>
+      <ul class="bullets">
+        <li><strong>Parameter Estimation in Recurrent Tumor Evolution with Limited Carrying Capacity</strong> — Contributed, INFORMS APS, Atlanta, GA, June 30–July 3, 2025; Poster, SMB, Edmonton, July 13–18, 2025.</li>
+        <li><strong>Limit theorems for the SFS of neutral mutations in an exponentially growing population</strong> — Invited, AMS Fall Central Sectional Meeting, UT San Antonio, Sept 14–15, 2024.</li>
+        <li><strong>Parameter Estimation from Single-Patient, Single-Time-Point Sequencing Data of Recurrent Tumors</strong> — Invited, KSMB–SMB, Seoul, June 30–July 5, 2024; Invited, IC&DM, SJTU, July 7–9, 2024; Contributed, INFORMS Annual Meeting, Phoenix, Oct 15–18, 2023.</li>
+      </ul>
+    </section>
+
+    <!-- References -->
+    <section id="refs" class="card">
+      <h2>References</h2>
+      <div class="grid-2">
+        <div>
+          <p class="ref">
+            <strong>Kevin Leder</strong> (PhD Advisor)<br>
+            Professor, Industrial &amp; Systems Engineering, University of Minnesota<br>
+            <a href="mailto:kevin.leder@isye.umn.edu">kevin.leder@isye.umn.edu</a>
+          </p>
+          <p class="ref">
+            <strong>William L. Cooper</strong> (Committee)<br>
+            Professor, Industrial &amp; Systems Engineering, University of Minnesota<br>
+            <a href="mailto:billcoop@umn.edu">billcoop@umn.edu</a>
+          </p>
+        </div>
+        <div>
+          <p class="ref">
+            <strong>Jasmine Foo</strong> (Committee)<br>
+            Distinguished McKnight University Professor, School of Mathematics, University of Minnesota<br>
+            <a href="mailto:jyfoo@umn.edu">jyfoo@umn.edu</a>
+          </p>
+          <p class="ref">
+            <strong>Zicheng Wang</strong> (Collaborator)<br>
+            Assistant Professor, School of Data Science, CUHK–Shenzhen<br>
+            <a href="mailto:wangzicheng@cuhk.edu.cn">wangzicheng@cuhk.edu.cn</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="card">
       <h2>Contact</h2>
-      <p>Email: zhan8093@umn.edu</p>
+      <p>Email: <a href="mailto:zhan8093@umn.edu">zhan8093@umn.edu</a> • Minneapolis, MN</p>
+      <p id="cv" class="mini">PDF CV: <a href="cv_xuanming_zhang.pdf">Download</a> (place your file at this path).</p>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; <span id="year"></span> Xuanming Zhang</span>
+      <span class="push"></span>
+      <span id="updated">Last updated: </span>
+    </div>
+  </footer>
+
+  <script>
+    // footer dates
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('updated').textContent = 'Last updated: ' + new Date(document.lastModified).toLocaleDateString();
+    // smooth scroll
+    document.querySelectorAll('.site-nav a').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const href = a.getAttribute('href');
+        if(href.startsWith('#')){
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({behavior:'smooth', block:'start'});
+        }
+      });
+    });
+  </script>
 </body>
 </html>
