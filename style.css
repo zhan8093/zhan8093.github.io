@@ -1,119 +1,102 @@
-/* ====== Design tokens ====== */
+/* ---- tokens ---- */
 :root{
-  --bg: #f7f9fc;
-  --card: #ffffff;
-  --text: #1f2937;
-  --muted: #6b7280;
-  --primary: #0a66c2;  /* link/nav color */
-  --border: #e5e7eb;
-  --shadow: 0 6px 20px rgba(15, 23, 42, .08);
+  --bg:#0b0f16;
+  --card:#121827;
+  --text:#eaf1ff;
+  --muted:#a7b0c4;
+  --accent:#78b0ff;
+  --line:#1f2740;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
 }
-
-@media (prefers-color-scheme: dark){
+@media (prefers-color-scheme: light){
   :root{
-    --bg: #0b1020;
-    --card: #12172a;
-    --text: #eef2ff;
-    --muted: #9aa3b2;
-    --primary: #7cc4ff;
-    --border: #1f2740;
-    --shadow: 0 8px 26px rgba(0,0,0,.35);
+    --bg:#f6f8fb; --card:#ffffff; --text:#0f1628; --muted:#566079;
+    --accent:#0a66c2; --line:#e7ecf4; --shadow: 0 8px 24px rgba(20,40,80,.08);
   }
 }
 
-/* ====== Base ====== */
 *{box-sizing:border-box}
-html, body{margin:0; padding:0}
+html,body{margin:0}
 body{
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  line-height:1.7;
-  background:var(--bg);
-  color:var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.7;
 }
 
-/* ====== Header ====== */
-header{
-  background: linear-gradient(135deg, var(--primary) 0%, #2f80ed 70%);
-  color:#fff;
-  padding: 56px 20px 42px;
-  text-align:center;
-  box-shadow: var(--shadow);
+/* ---- hero ---- */
+.hero{
+  background: radial-gradient(80% 120% at 20% -10%, color-mix(in oklab, var(--accent) 35%, transparent) 0%, transparent 60%),
+              linear-gradient(180deg, color-mix(in oklab, var(--accent) 22%, var(--card)) 0%, var(--card) 100%);
+  border-bottom:1px solid var(--line);
+  position:relative;
 }
-header h1{
-  margin:0 0 6px;
-  font-size: clamp(28px, 4vw, 44px);
-  letter-spacing:.2px;
+.container{max-width:1080px; margin:0 auto; padding:0 20px}
+.hero-inner{
+  display:grid; grid-template-columns: 1fr auto; gap:24px; align-items:center;
+  padding:48px 0 24px;
 }
-header p{
-  margin:0;
-  opacity:.92;
-  font-size: clamp(14px, 1.6vw, 18px);
+.title{margin:0; font-size: clamp(30px, 4vw, 44px); letter-spacing:.2px}
+.subtitle{margin:6px 0 12px; color:var(--muted)}
+.chips{display:flex; gap:10px; flex-wrap:wrap}
+.chip{
+  display:inline-block; padding:7px 12px; border-radius:999px;
+  background: color-mix(in oklab, var(--accent) 18%, transparent);
+  border:1px solid color-mix(in oklab, var(--accent) 35%, var(--line));
+  color:var(--text); text-decoration:none; font-weight:600;
 }
-
-/* ====== Nav (sticky) ====== */
-nav{
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: var(--card);
-  border-bottom: 1px solid var(--border);
-  padding: 10px 16px;
-  text-align:center;
-  box-shadow: 0 1px 0 rgba(0,0,0,.02);
-}
-nav a{
-  display:inline-block;
-  margin: 0 10px;
-  padding: 6px 10px;
-  text-decoration:none;
-  color: var(--primary);
-  font-weight: 600;
-  border-radius: 8px;
-  transition: all .2s ease;
-}
-nav a:hover{
-  background: color-mix(in oklab, var(--primary) 12%, transparent);
-  text-underline-offset: 3px;
+.avatar{
+  width:84px; height:84px; border-radius:50%; object-fit:cover;
+  border:2px solid color-mix(in oklab, var(--accent) 40%, var(--line));
 }
 
-/* ====== Main layout ====== */
-main{
-  max-width: 980px;
-  margin: 28px auto 60px;
-  padding: 0 20px;
-}
+/* nav */
+.nav{position:sticky; top:0; z-index:20; background:var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+.nav-inner{display:flex; gap:14px; padding:10px 0; flex-wrap:wrap}
+.nav a{color:var(--text); text-decoration:none; padding:6px 10px; border-radius:8px}
+.nav a:hover{background: color-mix(in oklab, var(--accent) 16%, transparent); color:var(--accent)}
 
-/* Section as “cards” */
-section{
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 22px 22px;
-  margin-bottom: 22px;
-  box-shadow: var(--shadow);
+/* ---- main content ---- */
+main{padding:24px 0 60px}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:16px;
+  padding:22px; margin:18px 0; box-shadow:var(--shadow);
 }
-section h2{
-  margin: 0 0 10px;
-  font-size: clamp(20px, 2.6vw, 26px);
-  padding-bottom: 6px;
-  border-bottom: 1px dashed var(--border);
+h2{
+  font-family: "Source Serif 4", Georgia, serif; font-weight:700; margin:0 0 10px;
+  border-bottom:1px dashed var(--line); padding-bottom:6px;
 }
+.lead{font-size:1.05rem}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline; text-underline-offset:3px}
+.mini{color:var(--muted); font-size:.92rem}
 
-/* Typography tweaks */
-p{margin: 10px 0 0}
-a{color: var(--primary)}
-a:hover{text-decoration: underline; text-underline-offset: 2px}
-ul{margin:8px 0 0 20px}
-.muted{color: var(--muted)}
+/* lists / pubs */
+.bullets{margin:10px 0 0 18px}
+.pubs{margin:10px 0 0 20px}
+.pubs li{margin:10px 0}
+.me{font-weight:700}
 
-/* Nice code/mono if you ever use it */
-code, pre{
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-}
+/* rows table */
+.rows{display:grid; gap:10px}
+.rows > div{display:grid; grid-template-columns: 1fr auto; gap:16px; border-bottom:1px solid var(--line); padding:8px 0}
+.rows > div:last-child{border-bottom:none}
+time{white-space:nowrap; color:var(--muted)}
 
-/* Small screens */
-@media (max-width: 600px){
-  nav{padding: 8px 6px}
-  nav a{margin:0 6px}
-  section{padding:18px}
+/* grid for references */
+.grid{display:grid; grid-template-columns: 1fr; gap:12px}
+@media (min-width:780px){ .grid{grid-template-columns:1fr 1fr} }
+
+/* details/summary */
+details{margin-top:6px}
+summary{cursor:pointer; list-style:none; font-weight:700}
+summary::-webkit-details-marker{display:none}
+
+/* footer */
+.footer{border-top:1px solid var(--line); padding:16px 0; color:var(--muted)}
+.footer .container{display:flex; align-items:center}
+.footer .spacer{flex:1}
+
+/* small screens */
+@media (max-width:640px){
+  .hero-inner{grid-template-columns:1fr; text-align:left}
+  .avatar{display:none}
 }
