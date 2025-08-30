@@ -1,35 +1,119 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  background-color: #fdfdfd;
-  color: #333;
+/* ====== Design tokens ====== */
+:root{
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #0a66c2;  /* link/nav color */
+  --border: #e5e7eb;
+  --shadow: 0 6px 20px rgba(15, 23, 42, .08);
 }
 
-header {
-  background-color: #007acc;
-  color: white;
-  padding: 30px 0;
-  text-align: center;
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg: #0b1020;
+    --card: #12172a;
+    --text: #eef2ff;
+    --muted: #9aa3b2;
+    --primary: #7cc4ff;
+    --border: #1f2740;
+    --shadow: 0 8px 26px rgba(0,0,0,.35);
+  }
 }
 
-nav {
-  background-color: #eee;
-  padding: 10px;
-  text-align: center;
+/* ====== Base ====== */
+*{box-sizing:border-box}
+html, body{margin:0; padding:0}
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  line-height:1.7;
+  background:var(--bg);
+  color:var(--text);
 }
 
-nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #007acc;
+/* ====== Header ====== */
+header{
+  background: linear-gradient(135deg, var(--primary) 0%, #2f80ed 70%);
+  color:#fff;
+  padding: 56px 20px 42px;
+  text-align:center;
+  box-shadow: var(--shadow);
+}
+header h1{
+  margin:0 0 6px;
+  font-size: clamp(28px, 4vw, 44px);
+  letter-spacing:.2px;
+}
+header p{
+  margin:0;
+  opacity:.92;
+  font-size: clamp(14px, 1.6vw, 18px);
 }
 
-main {
-  padding: 20px;
+/* ====== Nav (sticky) ====== */
+nav{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 16px;
+  text-align:center;
+  box-shadow: 0 1px 0 rgba(0,0,0,.02);
+}
+nav a{
+  display:inline-block;
+  margin: 0 10px;
+  padding: 6px 10px;
+  text-decoration:none;
+  color: var(--primary);
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all .2s ease;
+}
+nav a:hover{
+  background: color-mix(in oklab, var(--primary) 12%, transparent);
+  text-underline-offset: 3px;
 }
 
-section {
-  margin-bottom: 40px;
+/* ====== Main layout ====== */
+main{
+  max-width: 980px;
+  margin: 28px auto 60px;
+  padding: 0 20px;
+}
+
+/* Section as “cards” */
+section{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px 22px;
+  margin-bottom: 22px;
+  box-shadow: var(--shadow);
+}
+section h2{
+  margin: 0 0 10px;
+  font-size: clamp(20px, 2.6vw, 26px);
+  padding-bottom: 6px;
+  border-bottom: 1px dashed var(--border);
+}
+
+/* Typography tweaks */
+p{margin: 10px 0 0}
+a{color: var(--primary)}
+a:hover{text-decoration: underline; text-underline-offset: 2px}
+ul{margin:8px 0 0 20px}
+.muted{color: var(--muted)}
+
+/* Nice code/mono if you ever use it */
+code, pre{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+/* Small screens */
+@media (max-width: 600px){
+  nav{padding: 8px 6px}
+  nav a{margin:0 6px}
+  section{padding:18px}
 }
