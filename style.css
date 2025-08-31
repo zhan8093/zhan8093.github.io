@@ -92,3 +92,35 @@ body{
   background: #dce6ff;
 }
 
+.social-icons {
+  display: flex;
+  gap: 12px; /* spacing between icons */
+  margin-top: 10px;
+}
+
+.social-icons a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;   /* makes them circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;         /* icon color */
+  text-decoration: none;
+  font-size: 20px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Different brand colors */
+.social-icons a.email    { background: #0072c6; }  /* Outlook/Email blue */
+.social-icons a.linkedin { background: #0077b5; }  /* LinkedIn blue */
+.social-icons a.scholar  { background: #4285f4; }  /* Google Scholar blue */
+.social-icons a.github   { background: #333;    }  /* GitHub dark gray */
+
+/* Hover effect */
+.social-icons a:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+
