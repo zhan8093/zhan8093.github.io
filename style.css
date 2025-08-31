@@ -70,3 +70,25 @@ body{
 .footer{border-top:1px solid var(--line); padding:14px 0; color:var(--muted)}
 .footer .wrap{display:flex; align-items:center}
 .footer .push{flex:1}
+
+/* style.css */
+.contact-links .btn {
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: #f0f4ff;
+  color: #003366;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.contact-links .btn i {
+  margin-right: 6px;
+}
+
+.contact-links .btn:hover {
+  background: #dce6ff;
+}
+
