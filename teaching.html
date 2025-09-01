@@ -4,7 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Teaching — Xuanming Zhang</title>
-  <link rel="stylesheet" href="style.css?v=1" />
+  <link rel="stylesheet" href="style.css?v=3" />
+  <style>
+    /* page-specific tweaks */
+    .teach-wrap{ padding:28px 20px; }
+    .school{ margin:1.4rem 0; }
+    .school h2{ margin:.2rem 0 .6rem; }
+    .courses{ list-style:none; margin:0; padding:0; }
+    .course{ padding:.45rem 0; border-bottom:1px solid var(--line); }
+    .course:last-child{ border-bottom:none; }
+    .row{ display:flex; gap:12px; align-items:baseline; }
+    .code{ font-weight:700; white-space:nowrap; }
+    .title{ flex:1; }
+    .role{ color:var(--muted); white-space:nowrap; }
+    .term{ margin-left:auto; color:var(--muted); white-space:nowrap; }
+    @media (max-width:680px){
+      .row{ flex-direction:column; align-items:flex-start; }
+      .term{ margin-left:0; }
+    }
+  </style>
 </head>
 <body>
   <header class="topbar">
@@ -19,21 +37,77 @@
     </div>
   </header>
 
-  <main class="wrap" style="padding:28px 20px">
+  <main class="wrap teach-wrap">
     <h1>Teaching</h1>
 
-    <div class="rows" style="margin-top:10px">
-      <div><span>IE 4551/5551: <em>Production, Inventory, and Service Operations</em> — Teaching Assistant (UMN)</span><time>Spring 2025</time></div>
-      <div><span>IE 3521: <em>Statistics, Quality, and Reliability</em> — Teaching Assistant (UMN)</span><time>Spring 2023</time></div>
-      <div><span>IE 3521: <em>Statistics, Quality, and Reliability</em> — Teaching Assistant (UMN)</span><time>Spring 2022</time></div>
-      <div><span>IE 4551: <em>Production and Inventory Control</em> — Teaching Assistant (UMN)</span><time>Spring 2022</time></div>
-      <div><span>IE 3553: <em>Simulation</em> — Teaching Assistant (UMN)</span><time>Fall 2021</time></div>
-      <div><span><em>Markov Chain and Stochastic Processes</em> — Teaching Assistant (SUFE)</span><time>Summer 2019</time></div>
-    </div>
+    <!-- University of Minnesota -->
+    <section class="school">
+      <h2>University of Minnesota — Industrial &amp; Systems Engineering</h2>
+      <ul class="courses">
+        <li class="course">
+          <div class="row">
+            <span class="code">IE 4551/5551</span>
+            <span class="title"><em>Production, Inventory, and Service Operations</em></span>
+            <span class="role">Teaching Assistant</span>
+            <span class="term">Spring 2025</span>
+          </div>
+        </li>
+        <li class="course">
+          <div class="row">
+            <span class="code">IE 3521</span>
+            <span class="title"><em>Statistics, Quality, and Reliability</em></span>
+            <span class="role">Teaching Assistant</span>
+            <span class="term">Spring 2023</span>
+          </div>
+        </li>
+        <li class="course">
+          <div class="row">
+            <span class="code">IE 3521</span>
+            <span class="title"><em>Statistics, Quality, and Reliability</em></span>
+            <span class="role">Teaching Assistant</span>
+            <span class="term">Spring 2022</span>
+          </div>
+        </li>
+        <li class="course">
+          <div class="row">
+            <span class="code">IE 4551/5551</span>
+            <span class="title"><em>Production and Inventory Control</em></span>
+            <span class="role">Teaching Assistant</span>
+            <span class="term">Spring 2022</span>
+          </div>
+        </li>
+        <li class="course">
+          <div class="row">
+            <span class="code">IE 3553/5553</span>
+            <span class="title"><em>Simulation</em></span>
+            <span class="role">Teaching Assistant</span>
+            <span class="term">Fall 2021</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Shanghai University of Finance and Economics -->
+    <section class="school">
+      <h2>Shanghai University of Finance and Economics</h2>
+      <ul class="courses">
+        <li class="course">
+          <div class="row">
+            <span class="code">—</span>
+            <span class="title"><em>Markov Chain and Stochastic Processes</em></span>
+            <span class="role">Teaching Assistant</span>
+            <span class="term">Summer 2019</span>
+          </div>
+        </li>
+      </ul>
+    </section>
   </main>
 
   <footer class="footer">
-    <div class="wrap"><span>&copy; <span id="yr"></span> Xuanming Zhang</span><span class="push"></span></div>
+    <div class="wrap">
+      <span>&copy; <span id="yr"></span> Xuanming Zhang</span>
+      <span class="push"></span>
+    </div>
   </footer>
   <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
