@@ -4,7 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Talks — Xuanming Zhang</title>
-  <link rel="stylesheet" href="style.css?v=1" />
+  <link rel="stylesheet" href="style.css?v=2" />
+  <style>
+    /* page-specific tweaks */
+    .talks-wrap { padding:28px 20px; }
+    .work { margin: 1.6rem 0; }
+    .work h2 { margin:.2rem 0 .6rem; }
+    .subhead { margin:.4rem 0 .2rem; font-weight:700; font-size:1rem; }
+    .talk-list { margin:.2rem 0 0 1.2rem; }
+    .talk-list li { margin:.5rem 0; }
+  </style>
 </head>
 <body>
   <header class="topbar">
@@ -19,30 +28,56 @@
     </div>
   </header>
 
-  <main class="wrap" style="padding:28px 20px">
-    <h1>Conference Presentations &amp; Posters</h1>
+  <main class="wrap talks-wrap">
 
-    <h3>2025</h3>
-    <ul class="bullets">
-      <li><strong>Parameter Estimation in Recurrent Tumor Evolution with Limited Carrying Capacity</strong> — Contributed, INFORMS APS, Atlanta, GA, Jun&nbsp;30–Jul&nbsp;3, 2025.</li>
-      <li><strong>Parameter Estimation in Recurrent Tumor Evolution with Limited Carrying Capacity</strong> — Poster, Society for Mathematical Biology (SMB), Edmonton, Jul&nbsp;13–18, 2025.</li>
-    </ul>
+    <!-- Work 1 -->
+    <section class="work">
+      <h2>Parameter Estimation in Recurrent Tumor Evolution with Limited Carrying Capacity</h2>
 
-    <h3>2024</h3>
-    <ul class="bullets">
-      <li><strong>Limit theorems for the site frequency spectrum of neutral mutations in an exponentially growing population</strong> — Invited, Special Session on Applications of Probability in Biology, AMS Fall Central Sectional, UT San Antonio, Sep&nbsp;14–15, 2024.</li>
-      <li><strong>Parameter Estimation from Single Patient, Single Time-Point Sequencing Data of Recurrent Tumors</strong> — Invited, KSMB–SMB, Konkuk University, Seoul, Jun&nbsp;30–Jul&nbsp;5, 2024.</li>
-      <li><strong>Parameter Estimation from Single Patient, Single Time-Point Sequencing Data of Recurrent Tumors</strong> — Invited, First Conference on Intelligent Computing and Decision-Making, SJTU, Shanghai, Jul&nbsp;7–9, 2024.</li>
-    </ul>
+      <div class="subhead">Contributed Talks</div>
+      <ul class="talk-list">
+        <li>The 2025 INFORMS Applied Probability Society (APS) Conference, June&nbsp;30 – July&nbsp;3, 2025, Atlanta, Georgia, USA.</li>
+      </ul>
 
-    <h3>2023</h3>
-    <ul class="bullets">
-      <li><strong>Parameter Estimation from Single Patient, Single Time-Point Sequencing Data of Recurrent Tumors</strong> — Contributed, INFORMS Annual Meeting, Phoenix, AZ, Oct&nbsp;15–18, 2023.</li>
-    </ul>
+      <div class="subhead">Posters</div>
+      <ul class="talk-list">
+        <li>Annual Meeting of the Society for Mathematical Biology (SMB), July&nbsp;13–18, 2025, Edmonton, Alberta, Canada.</li>
+      </ul>
+    </section>
+
+    <!-- Work 2 -->
+    <section class="work">
+      <h2>Limit theorems for the site frequency spectrum of neutral mutations in an exponentially growing population</h2>
+
+      <div class="subhead">Invited Talks</div>
+      <ul class="talk-list">
+        <li>Special Session on Applications of Probability in Biology, AMS Fall Central Sectional Meeting, September&nbsp;14–15, 2024, University of Texas, San Antonio, USA.</li>
+      </ul>
+    </section>
+
+    <!-- Work 3 -->
+    <section class="work">
+      <h2>Parameter Estimation from Single Patient, Single Time-Point Sequencing Data of Recurrent Tumors</h2>
+
+      <div class="subhead">Invited Talks</div>
+      <ul class="talk-list">
+        <li>Annual Meeting of the Society for Mathematical Biology (SMB), June&nbsp;30 – July&nbsp;5, 2024, Konkuk University, Seoul, Republic of Korea.</li>
+        <li>The First Conference on Intelligent Computing and Decision-Making, July&nbsp;7–9, 2024, Shanghai Jiao Tong University, Shanghai, China.</li>
+      </ul>
+
+      <div class="subhead">Contributed Talks</div>
+      <ul class="talk-list">
+        <li>INFORMS Annual Meeting, October&nbsp;15–18, 2023, Phoenix, Arizona, USA.</li>
+      </ul>
+    </section>
+
   </main>
 
   <footer class="footer">
-    <div class="wrap"><span>&copy; <span id="yr"></span> Xuanming Zhang</span><span class="push"></span></div>
+    <div class="wrap">
+      <span>&copy; <span id="yr"></span> Xuanming Zhang</span>
+      <span class="push"></span>
+    </div>
   </footer>
   <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
