@@ -8,21 +8,34 @@
   <style>
     /* page-specific tweaks */
     .teach-wrap{ padding:28px 20px; }
-    .school{ margin:1.4rem 0; }
-    .school h2{ margin:.2rem 0 .6rem; }
+    .school{ margin:1.1rem 0; }
+  
+    /* smaller university title */
+    .school h2{
+      margin:.2rem 0 .5rem;
+      font-size:1.35rem;      /* smaller heading */
+      font-weight:800;
+    }
+  
+    /* course list (no divider lines) */
     .courses{ list-style:none; margin:0; padding:0; }
-    .course{ padding:.45rem 0; border-bottom:1px solid var(--line); }
-    .course:last-child{ border-bottom:none; }
+    .course{
+      padding:.38rem 0;        /* keep a little vertical space */
+      border-bottom:none;      /* remove the lines */
+    }
+  
     .row{ display:flex; gap:12px; align-items:baseline; }
     .code{ font-weight:700; white-space:nowrap; }
     .title{ flex:1; }
     .role{ color:var(--muted); white-space:nowrap; }
     .term{ margin-left:auto; color:var(--muted); white-space:nowrap; }
+  
     @media (max-width:680px){
       .row{ flex-direction:column; align-items:flex-start; }
       .term{ margin-left:0; }
     }
   </style>
+
 </head>
 <body>
   <header class="topbar">
