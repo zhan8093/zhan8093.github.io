@@ -4,7 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Papers — Xuanming Zhang</title>
-  <link rel="stylesheet" href="style.css?v=1" />
+  <link rel="stylesheet" href="style.css?v=2" />
+
+  <!-- page-specific tweaks -->
+  <style>
+    /* papers list */
+    .pubs { margin:.4rem 0 0 1.2rem; padding:0; }
+    .pubs li { margin:.7rem 0; }
+    .pubs em { font-style: italic; }
+    .pub-links a { margin-left:.5rem; font-size:.95rem; }
+
+    /* research-in-progress */
+    .rip { list-style: disc; margin:.2rem 0 0 1.2rem; padding:0; }
+    .rip li { margin:.8rem 0; }
+    .rip .title { font-style: italic; font-weight:600; display:block; }
+    .rip .desc { margin:.25rem 0 0; }
+    .rip .collab { margin:.25rem 0 0; color:var(--muted); }
+  </style>
 </head>
 <body>
   <header class="topbar">
@@ -22,15 +38,76 @@
   <main class="wrap" style="padding:28px 20px">
     <h1>Papers</h1>
     <ol class="pubs">
-      <li><em>Parameter Estimation in Recurrent Tumor Evolution with Limited Carrying Capacity</em> (with K. Leder, Z. Wang), 2025, preprint.</li>
-      <li><em>Limit theorems for the site frequency spectrum…</em> (with E.B. Gunnarsson, K. Leder), <em>SPA</em>, 2025.</li>
-      <li><em>Parameter estimation from single patient…</em> (with K. Leder, R. Sun, Z. Wang), <em>JMB</em>, 2024. <a href="https://link.springer.com/article/10.1007/s00285-024-02149-x">Link</a></li>
-      <li>WSC 2021 ultrasound operations paper (with Pan et al.).</li>
+      <li>
+        <em>Parameter Estimation in Recurrent Tumor Evolution with Limited Carrying Capacity</em>
+        (with K. Leder, Z. Wang), 2025, preprint.
+        <span class="pub-links">
+          <!-- replace # with your link(s) -->
+          <a href="#">arXiv</a>
+        </span>
+      </li>
+
+      <li>
+        <em>Limit theorems for the site frequency spectrum of neutral mutations in an exponentially growing population</em>
+        (with E.B. Gunnarsson, K. Leder),
+        <em>Stochastic Processes and their Applications</em>, 2025.
+        <span class="pub-links">
+          <a href="#">Journal</a>
+          <a href="#">arXiv</a>
+        </span>
+      </li>
+
+      <li>
+        <em>Parameter estimation from single patient, single time-point sequencing data of recurrent tumors</em>
+        (with K. Leder, R. Sun, Z. Wang),
+        <em>Journal of Mathematical Biology</em>, 2024.
+        <span class="pub-links">
+          <a href="https://link.springer.com/article/10.1007/s00285-024-02149-x">Journal</a>
+          <a href="#">arXiv</a>
+        </span>
+      </li>
+
+      <li>
+        <em>A high-fidelity, machine-learning enhanced queueing network simulation model for hospital ultrasound operations</em>
+        (with Y. Pan, Z. Xu, J. Guang, X. Chen, J.G. Dai, C. Wang, X. Zhang, et&nbsp;al.),
+        In <em>Winter Simulation Conference (WSC)</em>, 2021.
+        <span class="pub-links">
+          <a href="#">IEEE</a>
+          <a href="#">ACM</a>
+          <a href="#">arXiv</a>
+        </span>
+      </li>
     </ol>
+
+    <h2 style="margin-top:1.6rem">Research In Progress</h2>
+    <ul class="rip">
+      <li>
+        <span class="title">Mathematical Modeling of MDSC-Mediated Immunosuppression in Glioblastoma under Radiotherapy</span>
+        <div class="desc">
+          Developing an ODE-based model of the glioblastoma tumor–immune microenvironment to study the
+          role of myeloid-derived suppressor cells (MDSCs) under radiotherapy. The model, calibrated to
+          clinical data, explores optimal RT dosing strategies and generates in-silico virtual clinical trials.
+        </div>
+        <div class="collab">Collaborators: Kevin Leder, Jasmine Foo, Lindsey Sloan, John Metzcar.</div>
+      </li>
+
+      <li>
+        <span class="title">Mathematical Modeling of CISH-Knockout T Cells and Immune-Checkpoint Inhibition in Cancer Therapy</span>
+        <div class="desc">
+          Constructing a population-dynamical model incorporating endogenous and infused CISH-knockout T cells,
+          IL-2 dynamics, and tumor burden. The model evaluates competition over IL-2 and synergy with checkpoint
+          blockade, predicting conditions for durable tumor eradication.
+        </div>
+        <div class="collab">Collaborators: Kevin Leder, Jasmine Foo, Emil Lou, Kamran Kaveh, Sarah Anderson.</div>
+      </li>
+    </ul>
   </main>
 
   <footer class="footer">
-    <div class="wrap"><span>&copy; <span id="yr"></span> Xuanming Zhang</span><span class="push"></span></div>
+    <div class="wrap">
+      <span>&copy; <span id="yr"></span> Xuanming Zhang</span>
+      <span class="push"></span>
+    </div>
   </footer>
   <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
